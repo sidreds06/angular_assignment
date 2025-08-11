@@ -1,0 +1,31 @@
+<section class="form-wrapper">
+  <h2>Get in Touch</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    
+    <div class="field">
+      <label for="fullName">Full Name</label>
+      <input id="fullName" formControlName="name" placeholder="Enter your name" />
+      <span class="error-msg" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        Name is required.
+      </span>
+    </div>
+
+    <div class="field">
+      <label for="emailAddress">Email Address</label>
+      <input id="emailAddress" formControlName="email" placeholder="you@example.com" />
+      <span class="error-msg" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        Please enter a valid email.
+      </span>
+    </div>
+
+    <div class="field">
+      <label for="userMessage">Your Message</label>
+      <textarea id="userMessage" formControlName="message" rows="4" placeholder="Write something..."></textarea>
+      <span class="error-msg" *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+        Message cannot be empty.
+      </span>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Send Message</button>
+  </form>
+</section>

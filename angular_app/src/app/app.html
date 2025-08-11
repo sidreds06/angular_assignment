@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Angular App</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation"
+            (click)="open = !open" [attr.aria-expanded]="open">☰</button>
+
+    <nav class="nav" [class.open]="open">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/api-data" routerLinkActive="active">API Data</a>
+      <a routerLink="/form" routerLinkActive="active">Form</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <router-outlet></router-outlet>
+</main>

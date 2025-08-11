@@ -1,0 +1,52 @@
+.form-wrapper {
+  width: 90%;
+  max-width: 550px;
+  margin: 25px auto;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.error-msg {
+  font-size: 0.85rem;
+  color: crimson;
+}
